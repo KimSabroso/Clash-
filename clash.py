@@ -27,11 +27,6 @@ def main():
     healthvalue = 194
     pygame.mixer.init()
 
-    done = False
-    over = False
-    play = False
-    menu = False
-
     # font color of PLAY to be interactive
     play_color = constants.GREEN
     quit_color = constants.RED
@@ -43,13 +38,13 @@ def main():
     #load image
     player = pygame.image.load("images/ccc.jpg")
     grass = pygame.image.load("images/grass.png")
-    castle = pygame.image.load("images/cas.png")
+    castle = pygame.image.load("images/cheese.png")
     arrows = pygame.image.load("images/bullet2.png")
     enemyimg = pygame.image.load("images/rat.png")
     redbar = pygame.image.load("images/redbar.png")
     greenbar = pygame.image.load("images/greenbar.png")
-    gameover = pygame.image.load("images/gameover2.png")
-    win = pygame.image.load("images/youwin.png")
+    gameover = pygame.image.load("images/gameover3.png")
+    win = pygame.image.load("images/youwin2.png")
     icon= pygame.image.load("images/icon.png")
     startup= pygame.image.load("images/startup.png")
     tryagain= pygame.image.load("images/buttons/tryagain.png")
@@ -244,21 +239,11 @@ def main():
         
 
         
-    while not done:
+    while 1:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 exit(0)
-        
-        if not play:
-            textSurface, textRect = display_text(play_color, "PLAY", 100, 300, 100, 250, 100)
-            screen.blit(textSurface, textRect)
-
-            textSurface, textRect = display_text(quit_color, "High Score", 50, 100, 400, 200, 100)
-            screen.blit(textSurface, textRect)
-                
-            textSurface, textRect = display_text(quit_color, "Options", 50, 500, 400, 200, 100)
-            screen.blit(textSurface, textRect)
 
             
         pygame.display.flip()
