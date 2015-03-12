@@ -22,6 +22,11 @@ def main():
          screen.blit(player, (100,100))
          #update screen
          pygame.display.flip()
+         #loop
+         for event in pygame.event.get(): 
+         if event.type==pygame.QUIT:
+             pygame.quit() 
+             exit(0) 
 
 if __name__ == "__main__":
     main()
