@@ -20,6 +20,8 @@ def main():
          screen.fill(0)
          #draw screen element
          screen.blit(player, (100,100))
+         #update screen
+         pygame.display.flip()
 
 if __name__ == "__main__":
     main()
