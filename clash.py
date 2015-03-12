@@ -18,6 +18,8 @@ def main():
      while 1:
          #clear screen fill
          screen.fill(0)
+         #draw screen element
+         screen.blit(player, (100,100))
 
 if __name__ == "__main__":
     main()
