@@ -15,5 +15,9 @@ def main():
      #load image
      player = pygame.image.load("images/ccc.jpg")
 
+     while 1:
+         #clear screen fill
+         screen.fill(0)
+
 if __name__ == "__main__":
     main()
