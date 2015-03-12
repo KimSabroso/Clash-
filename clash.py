@@ -12,5 +12,8 @@ def main():
      height = 600
      screen=pygame.display.set_mode((width, height))
 
+     #load image
+     player = pygame.image.load("images/ccc.jpg")
+
 if __name__ == "__main__":
     main()
