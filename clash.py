@@ -30,6 +30,7 @@ def main():
      greenbar = pygame.image.load("images/greenbar.png")
      gameover = pygame.image.load("images/gameover3.png")
      win = pygame.image.load("images/youwin2.png")
+     icon= pygame.image.load("images/icon.png")
      enemyimg1 = enemyimg
 
      #load audio
