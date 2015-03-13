@@ -32,7 +32,9 @@ def main():
      win = pygame.image.load("images/youwin2.png")
      enemyimg1 = enemyimg
 
-     while 1:
+     run = 1
+     exitcode = 0
+     while run:
          btimer -= 1
          #clear screen fill
          screen.fill(0)
