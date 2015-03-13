@@ -149,7 +149,18 @@ def main():
              playerpos[0]-=5
          elif keys[3]:
           playerpos[0]+=5
-             
+
+         #check if win or lose
+         if pygame.time.get_ticks() >= 90000:
+            run = 0
+            exitcode = 1
+         if healthvalue <= 0:
+             run = 0
+             exitcode = 0
+         if ac[1] != 0:
+             accuracy = ac[0] * 1.0/ac[1] * 100
+         else:
+             accuracy = 0
 
 if __name__ == "__main__":
     main()
