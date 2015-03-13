@@ -14,6 +14,10 @@ def main():
      playerpos=[100,100]
      ac = [0,0]
      arrow = []
+     btimer = 100
+     btimer1 = 0
+     enemy = [[640,100]]
+     healthvalue = 194
      screen=pygame.display.set_mode((width, height))
 
      #load image
