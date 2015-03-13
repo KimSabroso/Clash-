@@ -192,6 +192,22 @@ class Menu(Frame):
             lbl = Label(self, bd = 0, bg = "lightgray", font = ("Arial", 20), text = "An errored occured.").place(x=255, y=235)
         self.option()
 
+    def sounds(self):
+        conn = sqlite3.connect('clash.db')
+        cursor = conn.execute("SELECT * FROM clash_option")
+        try:
+            first_row = next(cursor)
+            for row in chain((first_row,),cursor):
+                if str(row[1]) == "ON":
+                    conn.execute("UPDATE clash_option SET Sound = 'OFF'")
+                    conn.commit()
+                else:
+                    conn.execute("UPDATE clash_option SET Sound = 'ON'")
+                    conn.commit() 
+        except StopIteration as e:
+            lbl = Label(self, bd = 0, bg = "lightgray", font = ("Arial", 20), text = "An errored occured.").place(x=255, y=235)
+        self.option(
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
