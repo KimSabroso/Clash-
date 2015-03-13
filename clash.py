@@ -110,6 +110,7 @@ def main():
                  bullrect.left = bullet[1]
                  bullrect.top = bullet[2]
                  if badrect.colliderect(bullrect):
+                     enemysound.play()
                      ac[0] += 1
                      enemy.pop(index)
                      arrow.pop(index1)
