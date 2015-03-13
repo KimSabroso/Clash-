@@ -116,6 +116,15 @@ class Menu(Frame):
         clash.main()
         self.master.withdraw()
 
+    def sub_bg(self, lbl):
+        self.window()
+        self.bg_img.configure(image = self.sub)
+
+        img = PhotoImage(file = "images/lbl-"+lbl+".gif")
+        lbl = Label(self, bd =0, image = img)
+        lbl.image = img
+        lbl.place(x = 300, y = 155)
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
