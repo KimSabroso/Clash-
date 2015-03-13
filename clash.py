@@ -162,5 +162,34 @@ def main():
          else:
              accuracy = 0
 
+     #win/lose display
+     if exitcode == 0:
+         pygame.font.init()
+         font = pygame.font.Font(None, 24)
+         txt = font.render("Accuracy: "+str(accuracy)+"%", True, (255,0,0))
+         txtRect = txt.get_rect()
+         txtRect.centerx = screen.get_rect().centerx
+         txtRect.centery = screen.get_rect().centery+24
+         screen.blit(gameover, (0,0))
+         screen.blit(txt, txtRect)
+
+     else:
+         pygame.font.init()
+         font = pygame.font.Font(None, 24)
+         txt = font.render("Accuracy: "+str(accuracy)+"%", True, (0,255,0))
+         txtRect = txt.get_rect()
+         txtRect.centerx = screen.get_rect().centerx
+         txtRect.centery = screen.get_rect().centery+24
+         screen.blit(win, (0,0))
+         screen.blit(txt, txtRect)
+
+     while 1:
+         for event in pygame.event.get():
+             if event.type == pygame.QUIT:
+                 pygame.quit()
+                 exit(0)
+
+         pygame.display.flip()
+
 if __name__ == "__main__":
     main()
