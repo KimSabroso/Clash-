@@ -14,6 +14,11 @@ class Menu(Frame):
 
         self.master = master
 
+    def window(self):
+        pygame.init()
+        self.music_sound()
+        self.master.title("Clash ++")
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
