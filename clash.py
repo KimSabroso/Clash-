@@ -58,8 +58,15 @@ def main():
                       keys[2]=False
                   elif event.key==pygame.K_d:
                       keys[3]=False
-               
-                  exit(0) 
+         if keys[0]:
+             playerpos[1]-=5
+         elif keys[2]:
+              playerpos[1]+=5
+         if keys[1]:
+             playerpos[0]-=5
+         elif keys[3]:
+          playerpos[0]+=5
+             
 
 if __name__ == "__main__":
     main()
