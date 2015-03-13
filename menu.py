@@ -6,3 +6,18 @@ import tkinter as tk
 import clash
 import pygame
 from itertools import chain
+
+class Menu(Frame):
+
+    def __init__(self, master = None):
+        Frame.__init__(self,master)
+
+        self.master = master
+
+win = Tk()
+win.geometry("800x600")
+win.resizable(0,0)
+
+app = Menu(win)
+
+win.mainloop()
