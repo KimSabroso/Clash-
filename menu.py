@@ -57,7 +57,7 @@ class Menu(Frame):
         self.btn_ng.bind('<Enter>', self.btn_ngEnter)
         self.btn_ng.bind('<Leave>', self.btn_ngLeave)
 
-        self.btn_help = Button(self, bd=0, bg="black", image = self.help_btn)
+        self.btn_help = Button(self, bd=0, bg="black", image = self.help_btn, command = self.helps)
         self.btn_help.configure(image = self.help_btn)
         self.btn_help.place(x=30, y = 180)
         self.btn_help.bind('<Enter>', self.btn_helpEnter)
