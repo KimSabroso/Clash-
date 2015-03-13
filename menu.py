@@ -151,6 +151,11 @@ class Menu(Frame):
         lbl.image = img
         lbl.place(x =290, y = 220)
 
+        m1 = PhotoImage(file = "images/music.gif")
+        s1 = PhotoImage(file = "images/sound.gif")
+        self.m12 = PhotoImage(file = "images/music2.gif")
+        self.s12 = PhotoImage(file = "images/sound2.gif")
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
