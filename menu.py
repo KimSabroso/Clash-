@@ -51,7 +51,7 @@ class Menu(Frame):
 
     def show_button(self):
         #displaying of buttons
-        self.btn_ng = Button(self, bd=0, bg="black", image = self.new_game_btn)
+        self.btn_ng = Button(self, bd=0, bg="black", image = self.new_game_btn, command = self.new_game)
         self.btn_ng.configure(image = self.new_game_btn)
         self.btn_ng.place(x=30, y = 100)
         self.btn_ng.bind('<Enter>', self.btn_ngEnter)
