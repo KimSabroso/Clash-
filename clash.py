@@ -39,7 +39,26 @@ def main():
          #loop
          for event in pygame.event.get(): 
               if event.type==pygame.QUIT:
-                  pygame.quit() 
+                  pygame.quit()
+              if event.type == pygame.KEYDOWN:
+                 if event.key==K_w:
+                     keys[0]=True
+                 elif event.key==K_a:
+                     keys[1]=True
+                 elif event.key==K_s:
+                     keys[2]=True
+                 elif event.key==K_d:
+                     keys[3]=True
+              if event.type == pygame.KEYUP:
+                  if event.key==pygame.K_w:
+                      keys[0]=False
+                  elif event.key==pygame.K_a:
+                      keys[1]=False
+                  elif event.key==pygame.K_s:
+                      keys[2]=False
+                  elif event.key==pygame.K_d:
+                      keys[3]=False
+               
                   exit(0) 
 
 if __name__ == "__main__":
