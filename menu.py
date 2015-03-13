@@ -135,6 +135,14 @@ class Menu(Frame):
         self.window()
         self.show_button()
 
+    def helps(self):
+        self.sub_bg("help")
+
+        img =PhotoImage(file = "images/help_sub.gif")
+        lbl = Label(self, bd = 0, image = img)
+        lbl.image = img
+        lbl.place(x = 290, y = 220)
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
