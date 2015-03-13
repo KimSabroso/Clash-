@@ -43,7 +43,8 @@ def main():
      pygame.mixer.music.play(-1, 0.0)
      pygame.mixer.music.set_volume(0.25)
 
-     
+     pygame.display.set_caption("Clash ++")
+     pygame.display.set_icon(icon)
 
      run = 1
      exitcode = 0
