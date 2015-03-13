@@ -19,7 +19,6 @@ class Menu(Frame):
 
     def window(self):
         pygame.init()
-        self.music_sound()
         self.master.title("Clash ++")
 
         #load images
@@ -160,7 +159,7 @@ class Menu(Frame):
         music.image = m1
         music.place(x = 445, y = 245)
 
-        sound = Button(self, bd = 0, bg = "gray", image = s1)
+        sound = Button(self, bd = 0, bg = "gray", image = s1, command = self.sounds)
         sound.image = s1
         sound.place(x = 445, y = 310)
 
@@ -206,7 +205,7 @@ class Menu(Frame):
                     conn.commit() 
         except StopIteration as e:
             lbl = Label(self, bd = 0, bg = "lightgray", font = ("Arial", 20), text = "An errored occured.").place(x=255, y=235)
-        self.option(
+        self.option()
 
 win = Tk()
 win.geometry("800x600")
