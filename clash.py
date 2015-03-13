@@ -41,6 +41,20 @@ def main():
          playerrot = pygame.transform.rotate(player, 360-angle*57.29)
          playerpos1 = (playerpos[0]-playerrot.get_rect().width/2, playerpos[1]-playerrot.get_rect().height/2)
          screen.blit(playerrot, playerpos1)
+
+         #draw the bullet
+         for bullet in arrow:
+            index = 0
+            velx = math.cos(bullet[0])* 10
+            vely = math.sin(bullet[0])* 10
+            bullet[1] += velx
+            bullet[2] += vely
+            if bullet[1]<-64 or bullet[1]>640 or bullet[2]<-64 or bullet[2]>480:
+                arrow.pop(index)
+            index += 1
+            for project in arrow:
+                arrow1 = pygame.transform.rotate(arrows, 360-project[0]* 57.29)
+                screen.blit(arrow1, (project[1], project[2]))
          #update screen
          pygame.display.flip()
          #loop
