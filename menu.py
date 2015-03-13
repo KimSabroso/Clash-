@@ -15,6 +15,7 @@ class Menu(Frame):
         self.master = master
 
         self.window()
+        self.show_button()
 
     def window(self):
         pygame.init()
