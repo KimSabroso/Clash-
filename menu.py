@@ -143,6 +143,14 @@ class Menu(Frame):
         lbl.image = img
         lbl.place(x = 290, y = 220)
 
+    def option(self):
+        self.sub_bg("options")
+
+        img = PhotoImage(file = "images/option_bg.gif")
+        lbl = Label(self, bd = 0, image = img)
+        lbl.image = img
+        lbl.place(x =290, y = 220)
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
