@@ -26,6 +26,8 @@ def main():
      castle = pygame.image.load("images/cheese.png")
      arrows = pygame.image.load("images/bullet2.png")
      enemyimg = pygame.image.load("images/rat.png")
+     redbar = pygame.image.load("images/redbar.png")
+     greenbar = pygame.image.load("images/greenbar.png")
      enemyimg1 = enemyimg
 
      while 1:
