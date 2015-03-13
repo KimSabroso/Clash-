@@ -43,6 +43,11 @@ class Menu(Frame):
         
         self.pack(fill = BOTH, expand = 1)
 
+        #display background
+        self.bg_img = Label(self, image = bg)
+        self.bg_img.image = bg
+        self. bg_img.place(x=-2, y=-2)
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
