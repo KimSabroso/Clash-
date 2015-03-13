@@ -125,6 +125,12 @@ class Menu(Frame):
         lbl.image = img
         lbl.place(x = 300, y = 155)
 
+        self.btn_menu = Button(self, bd =0, bg = "gray", image = self.menu_btn)
+        self.btn_menu.configure(image = self.menu_btn)
+        self.btn_menu.place(x =300, y = 400)
+        self.btn_menu.bind('<Enter>', self.btn_menuEnter)
+        self.btn_menu.bind('<Leave>', self.btn_menuLeave)
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
