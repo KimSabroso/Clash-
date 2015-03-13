@@ -21,6 +21,16 @@ def main():
          #clear screen fill
          screen.fill(0)
          #draw screen element
+         for x in range (grass.get_width()+1):
+            for y in range (grass.get_height()+1):
+                screen.blit(grass,(x*100,y*100))
+    
+    
+    
+         screen.blit(castle,(0,30))
+         screen.blit(castle,(0,135))
+         screen.blit(castle,(0,240))
+         screen.blit(castle,(0,345))
          screen.blit(player, (100,100))
          #update screen
          pygame.display.flip()
