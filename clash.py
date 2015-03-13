@@ -106,6 +106,11 @@ def main():
          txtRect = survivetxt.get_rect()
          txtRect.topright = [635, 5]
          screen.blit(survivetxt, txtRect)
+
+         #bar
+         screen.blit(redbar, (5,5))
+         for health in range(healthvalue):
+             screen.blit(greenbar, (health+8,8))
             
          #update screen
          pygame.display.flip()
