@@ -51,26 +51,26 @@ class Menu(Frame):
 
     def show_button(self):
         #displaying of buttons
-        self.btn_ng = Button(self, bd=0, bg="black", image = self.new_game_btn, command = self.new_game)
+        self.btn_ng = Button(self, bd=0, bg="black", image = self.new_game_btn)
         self.btn_ng.configure(image = self.new_game_btn)
         self.btn_ng.place(x=30, y = 100)
         self.btn_ng.bind('<Enter>', self.btn_ngEnter)
         self.btn_ng.bind('<Leave>', self.btn_ngLeave)
 
-        self.btn_help = Button(self, bd=0, bg="black", image = self.help_btn, command = self.helps)
+        self.btn_help = Button(self, bd=0, bg="black", image = self.help_btn)
         self.btn_help.configure(image = self.help_btn)
         self.btn_help.place(x=30, y = 180)
         self.btn_help.bind('<Enter>', self.btn_helpEnter)
         self.btn_help.bind('<Leave>', self.btn_helpLeave)
 
-        self.btn_option = Button(self, bd=0, bg="black", image = self.option_btn, command = self.option)
+        self.btn_option = Button(self, bd=0, bg="black", image = self.option_btn)
         self.btn_option.configure(image = self.option_btn)
         self.btn_option.place(x=30, y = 260)
         self.btn_option.bind('<Enter>', self.btn_optionEnter)
         self.btn_option.bind('<Leave>', self.btn_optionLeave)
         
 
-        self.btn_exit = Button(self, bd=0, bg="black", image = self.exit_btn, command = win.destroy)
+        self.btn_exit = Button(self, bd=0, bg="black", image = self.exit_btn)
         self.btn_exit.configure(image = self.exit_btn)
         self.btn_exit.place(x=30, y = 340)
         self.btn_exit.bind('<Enter>', self.btn_exitEnter)
