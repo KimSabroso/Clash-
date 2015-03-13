@@ -17,6 +17,24 @@ class Menu(Frame):
         self.window()
         self.show_button()
 
+    def music_sound(self):
+        pygame.mixer.music.load('audio/moonlight.wav')
+
+        conn = sqlite3.connect('clash.db')
+        cursor = conn.execute("SELECT * FROM clash_option")
+        first_row = next(cursor)
+        for row in chain((first_row,),cursor):
+            if str(row[0]) == "ON":  #if sound is on
+                pygame.mixer.music.play(10)  
+                
+            else:
+                 pygame.mixer.music.stop()
+
+            if str(row[1]) == "ON": #if sound is on
+                self.sound = "ON"
+            else:
+                self.sound = "OFF"
+
     def window(self):
         pygame.init()
         self.master.title("Clash ++")
