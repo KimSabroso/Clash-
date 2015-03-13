@@ -7,6 +7,7 @@ import random
 
 #initialize the game
 def main():
+     pygame.init()
      width = 800
      height = 600
      keys = [False, False, False,False]
