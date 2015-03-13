@@ -32,6 +32,17 @@ def main():
      win = pygame.image.load("images/youwin2.png")
      enemyimg1 = enemyimg
 
+     #load audio
+     hitsound = pygame.mixer.Sound("audio/explode.wav")
+     enemysound = pygame.mixer.Sound("audio/enemy.wav")
+     shootingsound = pygame.mixer.Sound("audio/shoot.wav")
+     hitsound.set_volume(0.05)
+     enemysound.set_volume(0.05)
+     shootingsound.set_volume(0.05)
+     pygame.mixer.music.load('audio/moonlight.wav')
+     pygame.mixer.music.play(-1, 0.0)
+     pygame.mixer.music.set_volume(0.25)
+
      run = 1
      exitcode = 0
      while run:
