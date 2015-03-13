@@ -164,6 +164,19 @@ class Menu(Frame):
         sound.image = s1
         sound.place(x = 445, y = 310)
 
+        conn = sqlite3.connect('clash.db')
+        cursor = conn.execute("SELECT * FROM clash_option")
+        try:
+            first_row = next(cursor)
+            for row in chain((first_row,),cursor):
+                if str(row[0]) == "ON":
+                    music.configure(image = self.m12)
+                if str(row[1]) == "ON":
+                    sound.configure(image = self.s12)
+        except StopIteration as e:
+            lbl = Label(self, bd = 0, bg = "lightgray", font = ("Arial", 20), text = "An errored occured.").place(x=255, y=235)
+
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
