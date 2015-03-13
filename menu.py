@@ -156,6 +156,14 @@ class Menu(Frame):
         self.m12 = PhotoImage(file = "images/music2.gif")
         self.s12 = PhotoImage(file = "images/sound2.gif")
 
+        music = Button(self, bd = 0, bg = "gray", image = m1)
+        music.image = m1
+        music.place(x = 445, y = 245)
+
+        sound = Button(self, bd = 0, bg = "gray", image = s1)
+        sound.image = s1
+        sound.place(x = 445, y = 310)
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
