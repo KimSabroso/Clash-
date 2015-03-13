@@ -65,6 +65,11 @@ def main():
                       keys[2]=False
                   elif event.key==pygame.K_d:
                       keys[3]=False
+              if event.type == pygame.MOUSEBUTTONDOWN:
+                  pos = pygame.mouse.get_pos()
+                  ac[1] += 1
+                  arrow.append([math.atan2(pos[1]-(playerpos[1]+32),pos[0]-(playerpos1[0]+26)),playerpos1[0]+32, playerpos[1]+32])
+        
          if keys[0]:
              playerpos[1]-=5
          elif keys[2]:
