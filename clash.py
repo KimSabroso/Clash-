@@ -83,6 +83,17 @@ def main():
              if badrect.left<64:
                  healthvalue -= random.randint(5,20)
                  enemy.pop(index)
+             #bullet and enemy collision
+             index1 = 0
+             for bullet in arrow:
+                 bullrect = pygame.Rect(arrows.get_rect())
+                 bullrect.left = bullet[1]
+                 bullrect.top = bullet[2]
+                 if badrect.colliderect(bullrect):
+                     ac[0] += 1
+                     enemy.pop(index)
+                     arrow.pop(index1)
+                 index1 += 1
              index += 1
          for bad in enemy:
              screen.blit(enemyimg1, bad)
