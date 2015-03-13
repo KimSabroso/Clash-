@@ -20,6 +20,7 @@ def main():
      player = pygame.image.load("images/ccc.jpg")
      grass = pygame.image.load("images/grass.png")
      castle = pygame.image.load("images/cheese.png")
+     arrows = pygame.image.load("images/bullet2.png")
 
      while 1:
          #clear screen fill
