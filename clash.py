@@ -29,6 +29,7 @@ def main():
      enemyimg1 = enemyimg
 
      while 1:
+         btimer -= 1
          #clear screen fill
          screen.fill(0)
          #draw screen element
