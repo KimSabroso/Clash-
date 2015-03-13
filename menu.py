@@ -112,6 +112,10 @@ class Menu(Frame):
     def btn_menuLeave(self, event):
         self.btn_menu.configure(image =self.menu_btn )
 
+    def new_game(self):
+        clash.main()
+        self.master.withdraw()
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
