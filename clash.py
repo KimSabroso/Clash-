@@ -25,6 +25,8 @@ def main():
      grass = pygame.image.load("images/grass.png")
      castle = pygame.image.load("images/cheese.png")
      arrows = pygame.image.load("images/bullet2.png")
+     enemyimg = pygame.image.load("images/rat.png")
+     enemyimg1 = enemyimg
 
      while 1:
          #clear screen fill
