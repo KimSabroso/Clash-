@@ -97,6 +97,13 @@ def main():
              index += 1
          for bad in enemy:
              screen.blit(enemyimg1, bad)
+
+         #HUD
+         font = pygame.font.Font(None, 24)
+         survivetxt = font.render(str((90000-pygame.time.get_ticks())/60000)+":"+str((90000-pygame.time.get_ticks())/1000%60).zfill(2), True, (0,0,0))
+         txtRect = survivetxt.get_rect()
+         txtRect.topright = [635, 5]
+         screen.blit(survivetxt, txtRect)
             
          #update screen
          pygame.display.flip()
