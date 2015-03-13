@@ -76,6 +76,13 @@ def main():
              if bad[0]<-64:
                  enemy.pop(index)
              bad[0] -= 7
+             #attack the cheese
+             badrect = pygame.Rect(enemyimg1.get_rect())
+             badrect.top = bad[1]
+             badrect.left = bad[0]
+             if badrect.left<64:
+                 healthvalue -= random.randint(5,20)
+                 enemy.pop(index)
              index += 1
          for bad in enemy:
              screen.blit(enemyimg1, bad)
