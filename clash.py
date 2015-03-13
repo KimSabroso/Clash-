@@ -12,6 +12,8 @@ def main():
      height = 600
      keys = [False, False, False,False]
      playerpos=[100,100]
+     ac = [0,0]
+     arrow = []
      screen=pygame.display.set_mode((width, height))
 
      #load image
