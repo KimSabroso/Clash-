@@ -3,7 +3,7 @@ import random, sys, pygame, time, copy
 from pygame.locals import *
 import math
 import random
-import constants
+
 
 #initialize the game
 def main():
@@ -24,9 +24,9 @@ def main():
          pygame.display.flip()
          #loop
          for event in pygame.event.get(): 
-         if event.type==pygame.QUIT:
-             pygame.quit() 
-             exit(0) 
+              if event.type==pygame.QUIT:
+                  pygame.quit() 
+                  exit(0) 
 
 if __name__ == "__main__":
     main()
