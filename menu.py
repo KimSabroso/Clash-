@@ -89,7 +89,7 @@ class Menu(Frame):
         self.btn_option.bind('<Leave>', self.btn_optionLeave)
         
 
-        self.btn_exit = Button(self, bd=0, bg="black", image = self.exit_btn)
+        self.btn_exit = Button(self, bd=0, bg="black", image = self.exit_btn, command = win.destroy)
         self.btn_exit.configure(image = self.exit_btn)
         self.btn_exit.place(x=30, y = 340)
         self.btn_exit.bind('<Enter>', self.btn_exitEnter)
