@@ -131,6 +131,10 @@ class Menu(Frame):
         self.btn_menu.bind('<Enter>', self.btn_menuEnter)
         self.btn_menu.bind('<Leave>', self.btn_menuLeave)
 
+    def menu(self):
+        self.window()
+        self.show_button()
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
