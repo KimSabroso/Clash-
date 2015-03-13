@@ -14,6 +14,8 @@ class Menu(Frame):
 
         self.master = master
 
+        self.window()
+
     def window(self):
         pygame.init()
         self.music_sound()
