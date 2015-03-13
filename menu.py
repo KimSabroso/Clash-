@@ -84,6 +84,24 @@ class Menu(Frame):
     def btn_menuEnter(self, event):
         self.btn_menu.configure(image = self.menuh_btn)
 
+    def btn_ngLeave(self, event):
+        self.btn_ng.configure(image =self.new_game_btn )
+
+    def btn_helpLeave(self, event):
+        self.btn_help.configure(image =self.help_btn )
+
+    def btn_hsLeave(self, event):
+        self.btn_hs.configure(image =self.hs_btn )
+
+    def btn_optionLeave(self, event):
+        self.btn_option.configure(image =self.option_btn )
+
+    def btn_exitLeave(self, event):
+        self.btn_exit.configure(image =self.exit_btn )
+
+    def btn_menuLeave(self, event):
+        self.btn_menu.configure(image =self.menu_btn )
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
