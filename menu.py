@@ -37,6 +37,7 @@ class Menu(Frame):
 
     def window(self):
         pygame.init()
+        self.music_sound()
         self.master.title("Clash ++")
 
         #load images
