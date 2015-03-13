@@ -37,6 +37,7 @@ class Menu(Frame):
 
     def window(self):
         pygame.init()
+        self.hoveredSound = pygame.mixer.Sound('audio/button.wav')
         self.music_sound()
         self.master.title("Clash ++")
 
