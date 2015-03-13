@@ -28,6 +28,8 @@ def main():
      enemyimg = pygame.image.load("images/rat.png")
      redbar = pygame.image.load("images/redbar.png")
      greenbar = pygame.image.load("images/greenbar.png")
+     gameover = pygame.image.load("images/gameover3.png")
+     win = pygame.image.load("images/youwin2.png")
      enemyimg1 = enemyimg
 
      while 1:
