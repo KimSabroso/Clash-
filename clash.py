@@ -33,7 +33,7 @@ def main():
          screen.blit(castle,(0,135))
          screen.blit(castle,(0,240))
          screen.blit(castle,(0,345))
-         screen.blit(player, (100,100))
+         screen.blit(player, playerpos)
          #update screen
          pygame.display.flip()
          #loop
