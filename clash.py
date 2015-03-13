@@ -61,6 +61,24 @@ def main():
             for project in arrow:
                 arrow1 = pygame.transform.rotate(arrows, 360-project[0]* 57.29)
                 screen.blit(arrow1, (project[1], project[2]))
+
+         #draw enemy
+         if btimer == 0:
+            enemy.append([640, random.randint(50,430)])
+            btimer = 100 -(btimer1 * 2)
+            if btimer1 >= 35:
+                btimer1 = 35
+            else:
+                btimer1 += 5
+         index = 0
+         for bad in enemy:
+             if bad[0]<-64:
+                 enemy.pop(index)
+             bad[0] -= 7
+             index += 1
+         for bad in enemy:
+             screen.blit(enemyimg1, bad)
+            
          #update screen
          pygame.display.flip()
          #loop
