@@ -131,6 +131,10 @@ class Menu(Frame):
     def btn_menuLeave(self, event):
         self.btn_menu.configure(image =self.menu_btn )
 
+    def sound_effect(self):
+        if self.sound == "ON":
+            self.hoveredSound.play()
+
     def new_game(self):
         clash.main()
         self.master.withdraw()
