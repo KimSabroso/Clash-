@@ -38,6 +38,11 @@ class Menu(Frame):
         self.menu_btn =PhotoImage (file = "images/buttons/menu.gif")
         self.menuh_btn =PhotoImage (file = "images/buttons/menuh.gif")
 
+        self.tk.call('wm', 'iconphoto', win._w, icon)
+
+        
+        self.pack(fill = BOTH, expand = 1)
+
 win = Tk()
 win.geometry("800x600")
 win.resizable(0,0)
