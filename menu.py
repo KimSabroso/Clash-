@@ -62,7 +62,7 @@ class Menu(Frame):
         self.btn_help.bind('<Enter>', self.btn_helpEnter)
         self.btn_help.bind('<Leave>', self.btn_helpLeave)
 
-        self.btn_option = Button(self, bd=0, bg="black", image = self.option_btn)
+        self.btn_option = Button(self, bd=0, bg="black", image = self.option_btn, command = self.option)
         self.btn_option.configure(image = self.option_btn)
         self.btn_option.place(x=30, y = 260)
         self.btn_option.bind('<Enter>', self.btn_optionEnter)
