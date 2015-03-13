@@ -43,6 +43,8 @@ def main():
      pygame.mixer.music.play(-1, 0.0)
      pygame.mixer.music.set_volume(0.25)
 
+     
+
      run = 1
      exitcode = 0
      while run:
@@ -98,6 +100,7 @@ def main():
              badrect.top = bad[1]
              badrect.left = bad[0]
              if badrect.left<64:
+                 hitsound.play()
                  healthvalue -= random.randint(5,20)
                  enemy.pop(index)
              #bullet and enemy collision
