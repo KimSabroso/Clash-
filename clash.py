@@ -21,7 +21,7 @@ def main():
      screen=pygame.display.set_mode((width, height))
 
      #load image
-     player = pygame.image.load("images/ccc.jpg")
+     player = pygame.image.load("images/pussy.png")
      grass = pygame.image.load("images/grass.png")
      castle = pygame.image.load("images/cheese.png")
      arrows = pygame.image.load("images/bullet2.png")
